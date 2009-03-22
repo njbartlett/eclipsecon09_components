@@ -8,7 +8,7 @@
          ================================= -->
     <target name="bundles" description="Build OSGi Bundles">
     	<echo message="bnd should in ${common.basedir}"/>
-        <taskdef resource="aQute/bnd/ant/taskdef.properties" classpath="${common.basedir}/bnd-0.0.255.jar" />
+        <taskdef resource="aQute/bnd/ant/taskdef.properties" classpath="${common.basedir}/tools/bnd-0.0.255.jar" />
         <pathconvert property="bndfiles" pathsep="," dirsep="/">
             <fileset dir=".">
                 <include name="*.bnd" />
