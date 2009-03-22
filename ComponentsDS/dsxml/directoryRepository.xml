@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0"
+	name="DirectoryRepository">
+
+   <implementation class="net.eclipsetraining.osgi.contacts.core.directory.internal.DirectoryRepositoryDS"/>
+   
+   <property name="name" value="Directory"/>
+   <property name="dirName" value="contacts"/>
+   
+   <service>
+      <provide interface="net.eclipsetraining.osgi.contacts.api.ContactRepository"/>
+   </service>
+   
+   <reference name="LogService"
+   		interface="org.osgi.service.log.LogService"
+   		cardinality="0..1"
+   		policy="dynamic"
+   		bind="setLog"
+   		unbind="unsetLog"
+   		/>
+   		
+   <reference name="ContactRepositoryListeners"
+   		interface="net.eclipsetraining.osgi.contacts.api.ContactRepositoryListener"
+   		cardinality="0..n"
+   		policy="dynamic"
+   		bind="addListener"
+   		unbind="removeListener"
+   		target="(name=Directory)"
+   		/>
+</scr:component>

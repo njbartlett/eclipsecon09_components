@@ -1,0 +1,2 @@
+Private-Package: net.eclipsetraining.osgi.contacts.core.directory.internal,\
+	net.eclipsetraining.osgi.dirmon

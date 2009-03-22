@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xmlns:osgi-compendium="http://www.springframework.org/schema/osgi-compendium"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd
+		http://www.springframework.org/schema/osgi-compendium http://www.springframework.org/schema/osgi-compendium/spring-osgi-compendium.xsd">
+		
+	<!-- IN -->	
+	<osgi:list id="directoryRepoListeners" cardinality="0..N"
+		interface="org.osgi.service.log.LogListener"/>
+		
+	<osgi:reference id="log" cardinality="0..1" interface="org.osgi.service.log.LogService"/>
+
+	<!-- OUT -->
+	<osgi:service ref="directoryRepo" auto-export="interfaces">
+		<osgi:service-properties>
+			<entry key="name" value="Directory"/>
+		</osgi:service-properties>
+	</osgi:service>
+
+	<!--
+	<osgi:service ref="dummies" auto-export="interfaces">
+		<osgi:service-properties>
+			<entry key="name" value="Some Dummies" />
+		</osgi:service-properties>
+	</osgi:service>
+	<osgi:service ref="nerds" auto-export="interfaces">
+		<osgi:service-properties>
+			<entry key="name" value="OSGi Nerds" />
+		</osgi:service-properties>
+	</osgi:service>
+
+	<osgi:reference interface="org.osgi.service.log.LogService"
+		id="logService" cardinality="0..1">
+		<osgi:listener ref="log" bind-method="bindLogService"
+			unbind-method="unbindLogService" />
+	</osgi:reference>
+	-->
+
+</beans>

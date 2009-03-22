@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="ipojo" default="instrument">
+
+	<import file="../Core/common.xml"/>
+	
+	<taskdef name="ipojo"
+		classpath="tools/org.apache.felix.ipojo.ant-1.2.0.jar"
+		classname="org.apache.felix.ipojo.task.IPojoTask"/>
+	
+    <target name="instrument" depends="bundles" description="Instrument Bundle JAR for iPOJO">
+    	<ipojo input="contacts.core.directory_ipojo.jar"
+    		metadata="contacts.core.directory_ipojo.xml"/>
+    </target>
+	
+</project>

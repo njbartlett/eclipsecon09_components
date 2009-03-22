@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="common" default="nodefault">
+	
+	<dirname property="common.basedir" file="${ant.file.common}"/>
+
+    <!-- ================================= 
+          target: bundles              
+         ================================= -->
+    <target name="bundles" description="Build OSGi Bundles">
+    	<echo message="bnd should in ${common.basedir}"/>
+        <taskdef resource="aQute/bnd/ant/taskdef.properties" classpath="${common.basedir}/bnd-0.0.255.jar" />
+        <pathconvert property="bndfiles" pathsep="," dirsep="/">
+            <fileset dir=".">
+                <include name="*.bnd" />
+            </fileset>
+        </pathconvert>
+        <bnd eclipse="true" failok="false" files="${bndfiles}"/>
+    </target>
+	
+	<!-- - - - - - - - - - - - - - - - - - 
+          target: nodefault                      
+         - - - - - - - - - - - - - - - - - -->
+    <target name="nodefault">
+            <echo message="There is no default target"/>
+    </target>
+
+
+</project>

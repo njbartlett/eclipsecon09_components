@@ -1,0 +1,4 @@
+Private-Package=net.eclipsetraining.osgi.contacts.core.directory.internal,\
+	net.eclipsetraining.osgi.dirmon
+Service-Component: OSGI-INF/directoryRepository.xml
+Include-Resource: OSGI-INF=dsxml

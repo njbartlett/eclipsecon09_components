@@ -1,0 +1,2 @@
+Bundle-Activator=net.eclipsetraining.osgi.contacts.app.ui.swing.internal.Activator
+Private-Package=net.eclipsetraining.osgi.contacts.app.ui.swing.internal

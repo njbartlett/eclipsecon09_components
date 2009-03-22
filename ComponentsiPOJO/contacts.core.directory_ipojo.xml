@@ -1,0 +1,27 @@
+<ipojo>
+	<!-- Component Factory Declaration -->
+	<component name="DirectoryRepository"
+		classname="net.eclipsetraining.osgi.contacts.core.directory.internal.DirectoryRepositoryiPOJO">
+		
+		<provides>
+			<property name="dirName" field="dirName"/>
+			<property name="name" type="string" value="iPOJO"/>
+		</provides>
+		
+		<requires field="log" optional="true"/>
+		
+		<!--
+		<requires field="listeners" optional="true"
+			specification="net.eclipsetraining.osgi.contacts.api.ContactRepositoryListener"
+			filter="(name=iPOJO)"/>
+			-->
+		
+		<callback transition="validate" method="activate"/>
+		<callback transition="invalidate" method="deactivate"/>
+	</component>
+	
+	<!-- Create one instance -->
+	<instance component="DirectoryRepository">
+		<property name="dirName" value="contacts"/>
+	</instance>
+</ipojo>

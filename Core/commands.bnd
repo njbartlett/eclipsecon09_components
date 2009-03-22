@@ -1,0 +1,2 @@
+Bundle-Activator=net.eclipsetraining.osgi.commands.CommandsActivator
+Private-Package=net.eclipsetraining.osgi.commands

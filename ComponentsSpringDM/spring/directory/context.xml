@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	                    http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean name="directoryRepo" class="net.eclipsetraining.osgi.contacts.core.directory.internal.DirectoryRepositoryDM"
+		init-method="activate" destroy-method="deactivate">
+		<!-- hard coded dirName, for now -->
+		<property name="dirName" value="contacts"/>
+		<property name="listeners" ref="directoryRepoListeners"/>
+		<property name="log" ref="log"/>
+	</bean>
+
+</beans>
