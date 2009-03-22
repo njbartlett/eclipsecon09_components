@@ -6,6 +6,7 @@
    
    <property name="name" value="Directory"/>
    <property name="dirName" value="contacts"/>
+   <property name="osgi.remote.interfaces" value="*"/>
    
    <service>
       <provide interface="net.eclipsetraining.osgi.contacts.api.ContactRepository"/>

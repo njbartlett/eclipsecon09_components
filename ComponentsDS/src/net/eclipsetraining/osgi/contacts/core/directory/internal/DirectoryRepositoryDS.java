@@ -90,6 +90,7 @@ public class DirectoryRepositoryDS implements ContactRepository, DirectoryChange
 			}
 		}
 		
+		// Replace following block with TODO
 		ContactRepositoryListener[] snapshot = (ContactRepositoryListener[]) listeners.toArray(new ContactRepositoryListener[listeners.size()]);
 		for (ContactRepositoryListener listener : snapshot) {
 			try { listener.contactsAdded(newContacts); } catch (Exception e) { /* Ignore */ }
@@ -106,6 +107,7 @@ public class DirectoryRepositoryDS implements ContactRepository, DirectoryChange
 			}
 		}
 		
+		// Replace following block with TODO
 		ContactRepositoryListener[] snapshot = (ContactRepositoryListener[]) listeners.toArray(new ContactRepositoryListener[listeners.size()]);
 		for (ContactRepositoryListener listener : snapshot) {
 			try { listener.contactsRemoved(removedContacts); } catch (Exception e) { /* Ignore */ }

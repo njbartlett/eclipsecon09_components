@@ -4,7 +4,6 @@ import java.util.Properties;
 
 import net.eclipsetraining.osgi.contacts.api.Contact;
 import net.eclipsetraining.osgi.contacts.api.ContactRepository;
-import net.eclipsetraining.osgi.contacts.core.directory.internal.LogTracker;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
@@ -12,7 +11,6 @@ import org.osgi.framework.ServiceRegistration;
 
 public class Activator implements BundleActivator {
 
-	private LogTracker logTracker;
 	private ServiceRegistration dummiesReg;
 	private ServiceRegistration nerdsReg;
 
@@ -22,7 +20,7 @@ public class Activator implements BundleActivator {
 		
 		// Dummies
 		repository = new InMemoryContactRepository(new Contact[] {
-				new Contact("John", "Doe"),
+				new Contact("Joe", "Bloggs"),
 				new Contact("Max", "Mustermann")
 		});
 		
