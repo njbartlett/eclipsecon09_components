@@ -4,7 +4,7 @@
 	<import file="../Core/common.xml"/>
 	
 	<taskdef name="ipojo"
-		classpath="tools/org.apache.felix.ipojo.ant-1.0.0.jar"
+		classpath="tools/org.apache.felix.ipojo.ant-1.2.0.jar"
 		classname="org.apache.felix.ipojo.task.IPojoTask"/>
 	
     <target name="instrument" depends="bundles" description="Instrument Bundle JAR for iPOJO">
