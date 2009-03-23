@@ -1,2 +1,3 @@
 Bundle-Activator=net.eclipsetraining.osgi.contacts.app.ui.swing.internal.Activator
 Private-Package=net.eclipsetraining.osgi.contacts.app.ui.swing.internal
+Import-Package: org.osgi*;version=1,*

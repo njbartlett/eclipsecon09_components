@@ -8,7 +8,7 @@
 			<property name="name" type="string" value="iPOJO"/>
 		</provides>
 		
-		<requires field="log" optional="true"/>
+		<requires field="log"/>
 		
 		<!--
 		<requires field="listeners" optional="true"
