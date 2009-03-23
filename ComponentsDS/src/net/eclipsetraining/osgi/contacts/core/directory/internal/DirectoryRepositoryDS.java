@@ -19,6 +19,10 @@ import org.osgi.service.log.LogService;
 public class DirectoryRepositoryDS implements ContactRepository, DirectoryChangeListener {
 
 	private static final String FILENAME_SUFFIX = ".contact";
+	
+	public DirectoryRepositoryDS() {
+		System.out.println("DirectoryRepositoryDS constructed");
+	}
 
 	// Configured state
 	private final List<ContactRepositoryListener> listeners = Collections.synchronizedList(new ArrayList<ContactRepositoryListener>());
